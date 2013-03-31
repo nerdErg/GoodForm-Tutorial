@@ -53,6 +53,7 @@ grails.project.dependency.resolution = {
 
         compile ':cache:1.0.0'
         compile ':goodform:1.0'
+        compile ':rendering:0.4.3'
         compile ':simple-suggestions:0.1'
     }
 }
