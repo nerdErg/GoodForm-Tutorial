@@ -1,0 +1,15 @@
+ruleset("JobApplicationJob6") {
+
+    require(['Job4', 'Job5', 'Job6'])  //we need the answers to these questions
+
+    abortOnFail = true
+
+	rule('finished') {
+        when {
+            true
+        }
+        then {
+            next = ['End']
+        }
+    }
+}

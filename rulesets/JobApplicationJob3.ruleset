@@ -1,0 +1,16 @@
+ruleset("JobApplicationJob3") {
+
+    require(['Job1', 'Job2', 'Job3'])  //we need the answers to these questions
+
+    abortOnFail = true
+
+	rule("Second page of job application questions") {
+        when {
+            true
+        }
+        then {
+            next = ['Job4', 'Job5', 'Job6']
+        }
+    }
+
+}

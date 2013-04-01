@@ -1,0 +1,14 @@
+ruleset("JobApplication") {
+
+    abortOnFail = false
+
+    rule("First page of questions") {
+        when {
+            true
+        }
+        then {
+            next = ['Job1', 'Job2', 'Job3']
+        }
+    }
+
+}
