@@ -63,6 +63,7 @@ environments {
     development {
         grails.logging.jul.usebridge = true
         rulesEngine.uri = 'http://localhost:8081/rulesEngine'
+        goodform.uploaded.file.location = '.'
     }
     production {
         grails.logging.jul.usebridge = false
