@@ -1,0 +1,16 @@
+ruleset("ContactDetailsQ2") {
+
+    require(['Q1'])  //we need the answers to this question
+
+    abortOnFail = true
+
+	rule('finished') {
+        when {
+            true
+        }
+        then {
+            next = ['End']
+            description = "$Q1.names.givenNames $Q1.names.lastName"
+        }
+    }
+}
