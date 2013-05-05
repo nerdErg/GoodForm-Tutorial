@@ -22,12 +22,12 @@ class ContactDetailsTests {
     private ContactDetailsPage contactDetailsPage
 
     @Before
-    public void openLoginPage() {
+    public void openCreateForm() {
 
         String userName = System.getenv("SAUCE_USER_NAME");
         String accessKey = System.getenv("SAUCE_API_KEY");
-        String browserEnv = "firefox" //System.getenv("SELENIUM_BROWSER");
-        String versionEnv = "21"//System.getenv("SELENIUM_VERSION");
+        String browserEnv = "iexplore" //System.getenv("SELENIUM_BROWSER");
+        String versionEnv = "8"//System.getenv("SELENIUM_VERSION");
         String platformEnv = "windows XP"; //System.getenv("SELENIUM_PLATFORM");
         if (userName != null && accessKey != null && browserEnv != null && platformEnv != null) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
