@@ -55,5 +55,6 @@ grails.project.dependency.resolution = {
         compile ':goodform:1.0.0'
         compile ':rendering:0.4.3'
         compile ':simple-suggestions:0.1'
+        compile ":webdriver:0.4.1"
     }
 }

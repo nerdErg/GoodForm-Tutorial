@@ -65,6 +65,9 @@ environments {
         rulesEngine.uri = 'http://localhost:8081/rulesEngine'
         goodform.uploaded.file.location = '.'
     }
+    test {
+        rulesEngine.uri = 'http://localhost:8081/rulesEngine'
+    }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
