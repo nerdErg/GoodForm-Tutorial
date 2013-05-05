@@ -24,8 +24,8 @@ class ContactDetailsTests {
     @Before
     public void openLoginPage() {
 
-        String userName = "rossco_9_9";//System.getenv("SAUCE_USER_NAME");
-        String accessKey = "44f0744c-1689-4418-af63-560303cbb37b"; //System.getenv("SAUCE_API_KEY");
+        String userName = System.getenv("SAUCE_USER_NAME");
+        String accessKey = System.getenv("SAUCE_API_KEY");
         String browserEnv = "firefox" //System.getenv("SELENIUM_BROWSER");
         String versionEnv = "21"//System.getenv("SELENIUM_VERSION");
         String platformEnv = "windows XP"; //System.getenv("SELENIUM_PLATFORM");
