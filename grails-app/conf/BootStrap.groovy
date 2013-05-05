@@ -2,6 +2,8 @@ import com.nerderg.goodForm.FormDefinition
 
 class BootStrap {
 
+    def formDataService
+
     def init = { servletContext ->
 
         String sampleForm = """
@@ -25,9 +27,8 @@ class BootStrap {
         }"""
 
 
-        if (!FormDefinition.get(1)) {
-            FormDefinition formDefinition = new FormDefinition(name: 'ContactDetails', formDefinition: sampleForm, formVersion: 1)
-            formDefinition.save()
+        if (!FormDefinition.findByName('ContactDetails')) {
+            formDataService.createNewFormVersion('ContactDetails', sampleForm)
         }
 
         String jobApplicationDefinition = """
@@ -72,6 +73,7 @@ class BootStrap {
                //role applying for
                question("Job4") {
                     "Enter the details of the role you are applying for" group: "role", {
+                          "Job Number" text: 50, required: true
                           "Position" text: 50, required: true
                           "Company" text: 50, required: true
                     }
@@ -94,9 +96,9 @@ class BootStrap {
                     }
                }
         }"""
-        if (!FormDefinition.get(2)) {
-            FormDefinition formDefinition = new FormDefinition(name: 'JobApplication', formDefinition: jobApplicationDefinition, formVersion: 1)
-            formDefinition.save()
+
+        if (!FormDefinition.findByName('JobApplication')) {
+            formDataService.createNewFormVersion('JobApplication', jobApplicationDefinition)
         }
     }
     def destroy = {
