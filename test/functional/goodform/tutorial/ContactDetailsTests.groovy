@@ -9,7 +9,7 @@ import org.junit.Test
 import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.remote.RemoteWebDriver
 
-import static junit.framework.Assert.assertFalse
+import static org.junit.Assert.*
 
 /**
  * @author Ross Rowe
@@ -44,9 +44,19 @@ class ContactDetailsTests {
 
     @Test
     public void testMandatoryFields() {
-        //contactDetailsPage.newFormLink.click()
         contactDetailsPage.submitButton.click()
         assertFalse(contactDetailsPage.errors.isEmpty())
+    }
+
+    @Test
+    public void successfulSubmission() {
+        contactDetailsPage.givenName = "Joe"
+        contactDetailsPage.lastName = "Tester"
+        contactDetailsPage.submitButton.click()
+        assertTrue(contactDetailsPage.errors.isEmpty())
+        assertEquals(contactDetailsPage.header.webElement.getText(), "Form complete")
+        contactDetailsPage.submitLink.click()
+        assertEquals(contactDetailsPage.header.webElement.getText(), "Form submitted")
     }
 
 

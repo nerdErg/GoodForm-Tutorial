@@ -11,9 +11,9 @@ import org.openqa.selenium.WebElement
  */
 class ContactDetailsPage extends WebDriverPage {
 
-//    static expectedURL = ~".+contactDetailsForm"
+    static expectedURL = ~".+contactDetailsForm.+"
 
-    static expectedTitle = "Grails"
+    //static expectedTitle = "Grails"
 
     LinkElement newFormLink
 
@@ -21,10 +21,22 @@ class ContactDetailsPage extends WebDriverPage {
 
     List<WebElement> errors
 
+    WebElement givenName
+
+    WebElement lastName
+
+    WebElement header
+
+    LinkElement submitLink
+
     static elements = {
         newFormLink(By.linkText("New form"))
+        submitLink(By.linkText("Submit Form"))
         submitButton(By.name("next"))
         errors(By.className("errors"))
+        givenName(By.id("Q1.names.givenNames"))
+        lastName(By.id("Q1.names.lastName"))
+        header(By.xpath("//h1"))
     }
 
 }
