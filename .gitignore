@@ -42,3 +42,14 @@
 # other
 *.iws
 
+
+/.idea/*
+
+/atlassian-ide-plugin.xml
+
+/GoodForm-Tutorial.iml
+.idea
+
+atlassian-ide-plugin.xml
+GoodForm-Tutorial-grailsPlugins.iml
+GoodForm-Tutorial.iml

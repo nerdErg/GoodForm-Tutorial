@@ -62,11 +62,11 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-        rulesEngine.uri = 'http://localhost:8081/rulesEngine'
+        rulesEngine.uri = 'http://localhost:8090/rulesEngine'
         goodform.uploaded.file.location = '.'
     }
     test {
-        rulesEngine.uri = 'http://localhost:8081/rulesEngine'
+        rulesEngine.uri = 'http://localhost:8090/rulesEngine'
     }
     production {
         grails.logging.jul.usebridge = false

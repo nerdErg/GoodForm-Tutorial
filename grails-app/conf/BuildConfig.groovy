@@ -49,12 +49,12 @@ grails.project.dependency.resolution = {
 
         build ":tomcat:$grailsVersion"
 
-        runtime ":database-migration:1.1"
+        runtime ":database-migration:1.3.5"
 
-        compile ':cache:1.0.0'
-        compile ':goodform:1.0.0'
-        compile ':rendering:0.4.3'
+        compile ':cache:1.1.1'
+        compile ':goodform:1.0.3'
+        compile ':rendering:0.4.4'
         compile ':simple-suggestions:0.1'
-        compile ":webdriver:0.4.1"
+        compile ":webdriver:0.4.2"
     }
 }
